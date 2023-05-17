@@ -8,8 +8,7 @@ public class movimientoPatos : MonoBehaviour
     //Abajo derecha-> (16,-5, 6)
     //Arriba izquierda-> (16,20,70)
     //Arriba derecha-> (16,20, 6)
-   public GameObject Patos;
-    
+
     void Start()
     {
         int max_vert = 20;
@@ -18,8 +17,6 @@ public class movimientoPatos : MonoBehaviour
         int min_hori = 6;
     }
 
-    void llamadaPatos()
-    {
+        
 
-    }
 }
