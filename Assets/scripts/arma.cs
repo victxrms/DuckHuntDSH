@@ -34,6 +34,12 @@ public class arma : MonoBehaviour
 
     public GameObject perroMalo;
 
+    public AudioSource maintheme;
+    public AudioSource fin;
+    public AudioSource over;
+
+    public AudioClip clearClip;
+
     void recargaEscopeta()
     {
         if (indiceBalaCargadorActual > 0) 
@@ -47,10 +53,13 @@ public class arma : MonoBehaviour
 
     void Start()
     {
+        clear.Stop();
         Cursor.lockState = CursorLockMode.Locked;
         hudJuegoCanvas.SetActive(true);
         hudFinalCanvas.SetActive(false);
         perroMalo.SetActive(false);
+        
+
     }
 
     IEnumerator finaliza()
@@ -62,7 +71,8 @@ public class arma : MonoBehaviour
 
     void Update()
     {
-            if (indiceBalaTotalActual < balasTotales.Count)
+        
+        if (indiceBalaTotalActual < balasTotales.Count)
             {
 
                 if (indiceBalaCargadorActual < balasCargador.Count)
@@ -98,15 +108,23 @@ public class arma : MonoBehaviour
 
             else
             {
+
+                fin.Play();
                 hudJuegoCanvas.SetActive(false);
                 hudFinalCanvas.SetActive(true);
                 Cursor.lockState = CursorLockMode.None;
 
+                maintheme.Stop();
+
                 script = personaje.GetComponent<cameraMovement>();
                 script.para();
 
+                
+
                 if (Input.GetMouseButtonDown(0))
                 {
+                    
+                    fin.Play();
                     StartCoroutine(finaliza());
                 }
 
