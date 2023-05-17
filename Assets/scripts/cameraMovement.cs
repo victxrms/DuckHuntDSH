@@ -19,6 +19,12 @@ public class cameraMovement : MonoBehaviour
 
     }
 
+    public void para()
+    {
+        horizontalSpeed = 0.0f;
+        verticalSpeed = 0.0f;
+    }
+
     // Update is called once per frame
     void Update()
     {

@@ -5,6 +5,7 @@ using System.Globalization;
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using static System.Net.Mime.MediaTypeNames;
 
 public class arma : MonoBehaviour
@@ -29,7 +30,9 @@ public class arma : MonoBehaviour
 
     public GameObject personaje;
 
-    private Script;
+    private cameraMovement script;
+
+    public GameObject perroMalo;
 
     void recargaEscopeta()
     {
@@ -44,13 +47,21 @@ public class arma : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         hudJuegoCanvas.SetActive(true);
         hudFinalCanvas.SetActive(false);
+        perroMalo.SetActive(false);
+    }
+
+    IEnumerator finaliza()
+    {
+        perroMalo.SetActive(true);
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("Main menu");
     }
 
     void Update()
     {
-       
             if (indiceBalaTotalActual < balasTotales.Count)
             {
 
@@ -89,11 +100,16 @@ public class arma : MonoBehaviour
             {
                 hudJuegoCanvas.SetActive(false);
                 hudFinalCanvas.SetActive(true);
-                
-                personaje.horizontalSpeed = 0;
-                personaje.verticalSpeed = 0;
 
-                script = personaje.getComponent<cameraMovement>(); 
+                script = personaje.GetComponent<cameraMovement>();
+                script.para();
+
+                if (Input.GetMouseButtonDown(0))
+                {
+                    StartCoroutine(finaliza());
+                }
+
+                
             }
     }
 }
