@@ -15,6 +15,7 @@ public class bala : MonoBehaviour
 
     void OnTriggerEnter(Collision collision)
     {
+        /*
         Destroy(collision.gameObject);
         Destroy(gameObject);
     
@@ -32,5 +33,6 @@ public class bala : MonoBehaviour
         {
             collision.SendMessage("Patos_lentos");
         }
+        */
     }
 } 

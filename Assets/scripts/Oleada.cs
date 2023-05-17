@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Oleada : MonoBehaviour
 {
+    /*
     public ValoresPatos[] OleadasPatos;
     private ValoresPatos OleadaActual;
     float tiempoEspera = 0.0f;
@@ -15,7 +16,7 @@ public class Oleada : MonoBehaviour
     void Start()
     {
         NextOrda(); //Cuando empieza el juego creamos una orda
-        tratamientoImpactos.OnDeathEnemigo += muertoEnemigo;
+        //tratamientoImpactos.OnDeathEnemigo += muertoEnemigo;
     }
 
     // Update is called once per frame
@@ -32,9 +33,9 @@ public class Oleada : MonoBehaviour
     void NextOrda()
     {
         numeroOrdaActual++;
-        ordaActual = ordaEnemigos[numeroOrdaActual - 1]; //cojo el primer enemigo
-        enemigosACrear = ordaActual.numEnemigos;
-        enemigosporMatar = ordaActual.numEnemigos;
+        //ordaActual = ordaEnemigos[numeroOrdaActual - 1]; //cojo el primer enemigo
+        //enemigosACrear = ordaActual.numEnemigos;
+        //enemigosporMatar = ordaActual.numEnemigos;
 
     }
 
@@ -46,4 +47,5 @@ public class Oleada : MonoBehaviour
             NextOrda();
         }
     }
+    */
 }

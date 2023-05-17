@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class xOrdas : MonoBehaviour
 {
-    public xvaloresEnemigos[] ordaEnemigos;
-    private xvaloresEnemigos ordaActual;
+    /*
+    //public xvaloresEnemigos[] ordaEnemigos;
+    //private xvaloresEnemigos ordaActual;
     float tiempoEspera = 0.0f;
     int numeroOrdaActual = 0; //Para ir recorriendo el array de los enemigos
     int enemigosACrear = 0;
@@ -46,4 +47,5 @@ public class xOrdas : MonoBehaviour
             NextOrda();
         }
     }
+    */
 }

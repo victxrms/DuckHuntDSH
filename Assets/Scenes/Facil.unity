@@ -5402,7 +5402,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 463431360}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6f84fe34a5211a4ebd40f7131cc3582, type: 3}
+  m_Script: {fileID: 11500000, guid: af766806a893e1b43bdfd7811951a8cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpawnPoint: {fileID: 803972261}
@@ -5426,9 +5426,9 @@ MonoBehaviour:
   - {fileID: 267179430}
   - {fileID: 318796673}
   - {fileID: 1165284773}
+  - {fileID: 968999621}
   - {fileID: 1183214082}
   - {fileID: 968999621}
-  - {fileID: 1318439656}
   - {fileID: 766499647}
   - {fileID: 1141340142}
   - {fileID: 2071042631}
