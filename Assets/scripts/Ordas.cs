@@ -15,7 +15,7 @@ public class xOrdas : MonoBehaviour
     void Start()
     {
         NextOrda(); //Cuando empieza el juego creamos una orda
-        tratamientoImpactos.OnDeathEnemigo += muertoEnemigo;
+        //tratamientoImpactos.OnDeathEnemigo += muertoEnemigo;
     }
 
     // Update is called once per frame

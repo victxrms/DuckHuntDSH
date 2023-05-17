@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Globalization;
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,42 +13,87 @@ public class arma : MonoBehaviour
     public GameObject bulletPrefab;
     public float bulletSpeed = 10;
 
-    public Image balaC;
-    public Image NobalaC;
-    public Image balaT;
-    public Image NobalaT;
+    public Sprite balaC;
+    public Sprite NobalaC;
+    public Sprite balaT;
+    public Sprite NobalaT;
 
+    public List<UnityEngine.UI.Image> balasCargador; // Lista para las imágenes de las balas del cargador
+    private int indiceBalaCargadorActual = 0; // Índice de la bala actual en el cargador
 
-    public Image balaCargador1;
-    public Image balaCargador2;
-    public Image balaCargador3;
+    public List<UnityEngine.UI.Image> balasTotales;
+    private int indiceBalaTotalActual = 0;
 
-    public List<Image> balasCargador; // Lista para las imágenes de las balas del cargador
-    public int indiceBalaCargadorActual = 0; // Índice de la bala actual en el cargador
+    public GameObject hudJuegoCanvas;
+    public GameObject hudFinalCanvas;
 
-    
+    public GameObject personaje;
 
-    public List<Image> balasTotales
-    public int indiceBalaTotalActual = 0;
+    private Script;
 
+    void recargaEscopeta()
+    {
+        if (indiceBalaCargadorActual > 0) 
+        {
+            balasCargador[indiceBalaCargadorActual - 1].sprite = balaC;
 
+            indiceBalaCargadorActual--;
+        }
+        
+    }
+
+    void Start()
+    {
+        hudJuegoCanvas.SetActive(true);
+        hudFinalCanvas.SetActive(false);
+    }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
-            bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
-
-            balaCargador1.sprite = NobalaC;
-
-            if (indiceBalaActual < balasTotales.Count)
+       
+            if (indiceBalaTotalActual < balasTotales.Count)
             {
-                balasTotales[indiceBalaActual].sprite = NobalaT;
-                indiceBalaActual++;
+
+                if (indiceBalaCargadorActual < balasCargador.Count)
+                {
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        UnityEngine.Debug.Log(indiceBalaCargadorActual);
+                        var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+                        bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
+
+                        balasCargador[indiceBalaCargadorActual].sprite = NobalaC;
+                        indiceBalaCargadorActual++;
+
+                        balasTotales[indiceBalaTotalActual].sprite = NobalaT;
+                        indiceBalaTotalActual++;
+
+                        if (indiceBalaCargadorActual >= 0) Invoke("recargaEscopeta", 3.0f);
+                    }
+
+                }
+
+                if (Input.GetKeyDown(KeyCode.R))
+                {
+                    for (int i = indiceBalaCargadorActual; i >= 1; i--)
+                    {
+                        balasCargador[i].sprite = balaC;
+                    }
+
+                    indiceBalaCargadorActual = 0;
+                }
+
             }
 
-            tiempoDesdeDisparo = 0f;
-        }
+            else
+            {
+                hudJuegoCanvas.SetActive(false);
+                hudFinalCanvas.SetActive(true);
+                
+                personaje.horizontalSpeed = 0;
+                personaje.verticalSpeed = 0;
+
+                script = personaje.getComponent<cameraMovement>(); 
+            }
     }
 }
