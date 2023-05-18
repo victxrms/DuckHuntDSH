@@ -5438,7 +5438,7 @@ MonoBehaviour:
   perroMalo: {fileID: 906933105}
   maintheme: {fileID: 1466321452}
   over: {fileID: 1786127111}
-  clearClip: {fileID: 8300000, guid: ddd775396162ec3439771c379d35e11b, type: 3}
+  clear: {fileID: 1687087935}
 --- !u!1001 &464396982
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19199,8 +19199,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ee53de0fcf5adce4686ae499b8e967aa, type: 3}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 8300000, guid: ddd775396162ec3439771c379d35e11b, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -21012,10 +21012,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1ef8c352cbfeeb44a95aba4da7fe7083, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
