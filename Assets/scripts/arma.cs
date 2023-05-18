@@ -111,24 +111,23 @@ public class arma : MonoBehaviour
 
             else
             {
+                 
                 clear.SetActive(true);
                 maintheme.SetActive(false);
                 hudJuegoCanvas.SetActive(false);
                 hudFinalCanvas.SetActive(true);
                 Cursor.lockState = CursorLockMode.None;
 
-                
-
                 script = personaje.GetComponent<cameraMovement>();
                 script.para();
 
                 if (Input.GetMouseButtonDown(0))
                 {
-                    
+                    Destroy(clear.GetComponent<AudioSource>());
+                    clear.SetActive(false);
                     StartCoroutine(finaliza());
                 }
 
-                
             }
     }
 }
