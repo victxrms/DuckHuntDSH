@@ -34,11 +34,11 @@ public class arma : MonoBehaviour
 
     public GameObject perroMalo;
 
-    public AudioSource maintheme;
-    public AudioSource fin;
-    public AudioSource over;
+    public GameObject maintheme;
+    
+    public GameObject over;
 
-    public AudioClip clearClip;
+    public GameObject clear;
 
     void recargaEscopeta()
     {
@@ -53,7 +53,8 @@ public class arma : MonoBehaviour
 
     void Start()
     {
-        clear.Stop();
+        clear.SetActive(false);
+        over.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         hudJuegoCanvas.SetActive(true);
         hudFinalCanvas.SetActive(false);
@@ -64,6 +65,8 @@ public class arma : MonoBehaviour
 
     IEnumerator finaliza()
     {
+        clear.SetActive(false);
+        over.SetActive(true);
         perroMalo.SetActive(true);
         yield return new WaitForSeconds(5);
         SceneManager.LoadScene("Main menu");
@@ -108,23 +111,20 @@ public class arma : MonoBehaviour
 
             else
             {
-
-                fin.Play();
+                clear.SetActive(true);
+                maintheme.SetActive(false);
                 hudJuegoCanvas.SetActive(false);
                 hudFinalCanvas.SetActive(true);
                 Cursor.lockState = CursorLockMode.None;
 
-                maintheme.Stop();
+                
 
                 script = personaje.GetComponent<cameraMovement>();
                 script.para();
 
-                
-
                 if (Input.GetMouseButtonDown(0))
                 {
                     
-                    fin.Play();
                     StartCoroutine(finaliza());
                 }
 

@@ -5436,9 +5436,8 @@ MonoBehaviour:
   hudFinalCanvas: {fileID: 1055832486}
   personaje: {fileID: 1695810845}
   perroMalo: {fileID: 906933105}
-  maintheme: {fileID: 1466321453}
-  fin: {fileID: 1687087936}
-  over: {fileID: 1786127112}
+  maintheme: {fileID: 1466321452}
+  over: {fileID: 1786127111}
   clearClip: {fileID: 8300000, guid: ddd775396162ec3439771c379d35e11b, type: 3}
 --- !u!1001 &464396982
 PrefabInstance:
@@ -21012,7 +21011,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ddd775396162ec3439771c379d35e11b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1ef8c352cbfeeb44a95aba4da7fe7083, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -21020,7 +21019,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
