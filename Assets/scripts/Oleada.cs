@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Oleada : MonoBehaviour
 {
-    /*
     public ValoresPatos[] OleadasPatos;
     private ValoresPatos OleadaActual;
     float tiempoEspera = 0.0f;

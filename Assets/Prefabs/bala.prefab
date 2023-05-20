@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 877030707105037652}
   - component: {fileID: 2666799172431423814}
   - component: {fileID: 3899096786858205163}
+  - component: {fileID: 941934568817636700}
   m_Layer: 0
   m_Name: bala
   m_TagString: Untagged
@@ -47,6 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 3
+  Patillo: {fileID: 0}
+  Diana: {fileID: 0}
 --- !u!54 &3899096786858205163
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -63,6 +66,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!136 &941934568817636700
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531431785023317998}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.05582554
+  m_Height: 0.24540237
+  m_Direction: 0
+  m_Center: {x: 0.04856187, y: 0.0026216875, z: -0.00043064653}
 --- !u!1 &5394583750875626800
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,7 +106,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5394583750875626800}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -2.671, y: 2.703, z: -3.371}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 6.219771, y: 6.219771, z: 5.160103}
   m_ConstrainProportionsScale: 0
   m_Children: []

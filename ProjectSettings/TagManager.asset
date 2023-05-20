@@ -9,6 +9,9 @@ TagManager:
   - hudJuego
   - hudFinal
   - perroFinal
+  - Pato
+  - Puntos_extra
+  - Patos_lentos
   layers:
   - Default
   - TransparentFX

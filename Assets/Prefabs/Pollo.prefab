@@ -9,7 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8423017340690997256, guid: 03bfdeb0af178bd4ea71eabc79243ce5, type: 3}
       propertyPath: m_Name
-      value: pollo
+      value: pollo Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8423017340690997256, guid: 03bfdeb0af178bd4ea71eabc79243ce5, type: 3}
+      propertyPath: m_TagString
+      value: Pato
       objectReference: {fileID: 0}
     - target: {fileID: 8426080329972573446, guid: 03bfdeb0af178bd4ea71eabc79243ce5, type: 3}
       propertyPath: m_RootOrder
@@ -71,5 +75,24 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -6866194310621115088, guid: 03bfdeb0af178bd4ea71eabc79243ce5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 03bfdeb0af178bd4ea71eabc79243ce5, type: 3}
+--- !u!1 &732455150158985726 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8423017340690997256, guid: 03bfdeb0af178bd4ea71eabc79243ce5, type: 3}
+  m_PrefabInstance: {fileID: 9137422873608460790}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1202982787630052640
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732455150158985726}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.31498212, y: 0.44219893, z: 0.39538622}
+  m_Center: {x: -0.0034434001, y: 0.21626887, z: -0.0072389445}
