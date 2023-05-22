@@ -5,9 +5,12 @@ using UnityEngine;
 public class bala : MonoBehaviour
 {
     public float life = 3;
-    public GameObject Patillo;
-    public GameObject Diana;
+    GameObject Pato;
 
+    void Start()
+    {
+        Pato = GameObject.FindWithTag("Pato");
+    }
 
     void Awake()
     {
@@ -16,24 +19,30 @@ public class bala : MonoBehaviour
         Destroy(gameObject, life);
     }
 
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
-        Destroy(other.gameObject);
         Destroy(gameObject);
     
-        if(other.gameObject.CompareTag("Pato"))
+        if(other.CompareTag("Pato"))
         {
-            Diana.SendMessage("Sumar_puntos");
+            //Spawner.SendMessage("Patotocado");            
+            //Diana.SendMessage("Sumar_puntos");
+            
+
         }
 
-        if(other.gameObject.CompareTag("Puntos_extra"))
+        if(other.CompareTag("Puntos_extra"))
         {
-            Diana.SendMessage("Puntos_extra");
+            Destroy(other.gameObject);
+            other.SendMessage("Puntos_extra");
         }
 
-        if(other.gameObject.CompareTag("Patos_lentos"))
+        if(other.CompareTag("Patos_lentos"))
         {
-            Patillo.SendMessage("Patos_lentos"); 
+            Destroy(other.gameObject);
+            Pato.SendMessage("Patos_lentos"); 
         }
     }   
 }
+
+

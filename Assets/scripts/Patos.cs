@@ -5,15 +5,15 @@ using System;
 
 public class Patos : MonoBehaviour
 {
-    //Abajo izquierda-> (16,-5,70)
-    //Abajo derecha-> (16,-5, 6)
-    //Arriba izquierda-> (16,20,70)
-    //Arriba derecha-> (16,20, 6)
+    //Abajo izquierda-> (12,7,15)
+    //Abajo derecha-> (12, 7, -45)
+    //Arriba izquierda-> (12,25,15)
+    //Arriba derecha-> (12, 25, -45)
 
-    float max_vert = 20f;
-    float min_vert = -5f;
-    float max_hori = 70f;
-    float min_hori = 6f;
+    float max_vert = 25f;
+    float min_vert = 7f;
+    float max_hori = 15f;
+    float min_hori = -45f;
     float y;
     float z;
     float velocidad_y;
@@ -60,13 +60,13 @@ public class Patos : MonoBehaviour
             {
                 y += velocidad_y;
                 z +=velocidad_z;
-                transform.position = new Vector3(16, y, z);
+                transform.position = new Vector3(12, y, z);
             }
             else
             {
                 y += velocidad_y;
                 z -=velocidad_z;
-                transform.position = new Vector3(16, y, z);
+                transform.position = new Vector3(12, y, z);
             }
         }
         else
@@ -75,13 +75,13 @@ public class Patos : MonoBehaviour
             {
                 y -= velocidad_y;
                 z +=velocidad_z;
-                transform.position = new Vector3(16, y, z);
+                transform.position = new Vector3(12, y, z);
             }
             else
             {
                 y -= velocidad_y;
                 z -=velocidad_z;
-                transform.position = new Vector3(16, y, z);
+                transform.position = new Vector3(12, y, z);
             }
         }
     }        

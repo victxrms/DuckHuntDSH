@@ -48,8 +48,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 3
-  Patillo: {fileID: 0}
-  Diana: {fileID: 0}
+  Patillo: {fileID: 732455150158985726, guid: 4d12643e415a49a44b840757f6078336, type: 3}
+  Diana: {fileID: 4847888090771919772, guid: e07a3371c1c26144d9da97955f7c95fd, type: 3}
+  Spawner: {fileID: 748648200341563017, guid: 32560ece57958e34abd0ae1a99cc9fa2, type: 3}
 --- !u!54 &3899096786858205163
 Rigidbody:
   m_ObjectHideFlags: 0
