@@ -8107,7 +8107,7 @@ GameObject:
   - component: {fileID: 700763854}
   - component: {fileID: 700763853}
   m_Layer: 0
-  m_Name: miss shot
+  m_Name: huida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8222,7 +8222,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &703068865
 PrefabInstance:
@@ -25809,12 +25809,12 @@ PrefabInstance:
       objectReference: {fileID: 1279234176}
     - target: {fileID: 748648200341563016, guid: 32560ece57958e34abd0ae1a99cc9fa2, type: 3}
       propertyPath: OleadasPatos.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 748648200341563016, guid: 32560ece57958e34abd0ae1a99cc9fa2, type: 3}
       propertyPath: OleadasPatos.Array.data[0].Pato
       value: 
-      objectReference: {fileID: 732455150158985726, guid: 4d12643e415a49a44b840757f6078336, type: 3}
+      objectReference: {fileID: 732455150158985726, guid: 1bc2b2f89a32b194ab425d552ae38af2, type: 3}
     - target: {fileID: 748648200341563016, guid: 32560ece57958e34abd0ae1a99cc9fa2, type: 3}
       propertyPath: OleadasPatos.Array.data[1].Pato
       value: 
@@ -25833,7 +25833,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 748648200341563016, guid: 32560ece57958e34abd0ae1a99cc9fa2, type: 3}
       propertyPath: OleadasPatos.Array.data[1].NumPatos
-      value: 3
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 748648200341563016, guid: 32560ece57958e34abd0ae1a99cc9fa2, type: 3}
       propertyPath: OleadasPatos.Array.data[2].NumPatos
@@ -25845,7 +25845,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 748648200341563016, guid: 32560ece57958e34abd0ae1a99cc9fa2, type: 3}
       propertyPath: OleadasPatos.Array.data[1].TiempoSpawn
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 748648200341563016, guid: 32560ece57958e34abd0ae1a99cc9fa2, type: 3}
       propertyPath: OleadasPatos.Array.data[2].TiempoSpawn
@@ -25853,7 +25853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 748648200341563017, guid: 32560ece57958e34abd0ae1a99cc9fa2, type: 3}
       propertyPath: m_Name
-      value: Spawner_facil
+      value: Spawner
       objectReference: {fileID: 0}
     - target: {fileID: 748648200341563017, guid: 32560ece57958e34abd0ae1a99cc9fa2, type: 3}
       propertyPath: m_IsActive
@@ -25873,7 +25873,7 @@ PrefabInstance:
       objectReference: {fileID: 935504635}
     - target: {fileID: 748648200341563019, guid: 32560ece57958e34abd0ae1a99cc9fa2, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 748648200341563019, guid: 32560ece57958e34abd0ae1a99cc9fa2, type: 3}
       propertyPath: m_LocalPosition.x

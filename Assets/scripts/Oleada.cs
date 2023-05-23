@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using System.Threading;
 using UnityEngine.SceneManagement;
 
-public class OleadaFacil : MonoBehaviour
+public class Oleada : MonoBehaviour
 {
     public ValoresPatos[] OleadasPatos;
     private ValoresPatos OleadaActual;
@@ -15,7 +15,7 @@ public class OleadaFacil : MonoBehaviour
     Vector3 posicionSpawnPato;
     private GameObject PatoInstancia;
     public ParticleSystem particulas;
-    public GameObject acierto, huida, clear, over, maintheme, perroMalo, hudJuegoCanvas, hudFinalCanvas, personaje, pistola;
+    public GameObject acierto, huida, clear, over, maintheme, perroMalo, hudJuegoCanvas, hudFinalCanvas, personaje, pistola, mira;
     public Text TextoHuida, TextoOleada;
     bool tocado, terminado = false;
     private cameraMovement script;
@@ -127,6 +127,7 @@ public class OleadaFacil : MonoBehaviour
         {
             Destroy(PatoInstancia);
         }
+        mira.SetActive(false);
         terminado = true;
         pistola.SetActive(false);
         clear.SetActive(true);

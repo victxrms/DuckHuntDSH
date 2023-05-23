@@ -39,7 +39,7 @@ public class bala : MonoBehaviour
 
         if(other.CompareTag("Patos_lentos"))
         {
-            UnityEngine.Debug.Log("[atos lentos");
+            UnityEngine.Debug.Log("Patos lentos");
             Destroy(other.gameObject);
             Pato.SendMessage("Patos_lentos"); 
         }
