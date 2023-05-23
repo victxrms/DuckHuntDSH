@@ -49,7 +49,15 @@ MonoBehaviour:
   particulas: {fileID: 5040932703309932253, guid: 2927eb73b9939024b83af6424ce557f5, type: 3}
   acierto: {fileID: 0}
   huida: {fileID: 0}
-  texto: {fileID: 0}
+  clear: {fileID: 0}
+  over: {fileID: 0}
+  maintheme: {fileID: 0}
+  perroMalo: {fileID: 0}
+  hudJuegoCanvas: {fileID: 0}
+  hudFinalCanvas: {fileID: 0}
+  personaje: {fileID: 0}
+  TextoHuida: {fileID: 0}
+  TextoOleada: {fileID: 0}
 --- !u!114 &748648200341563018
 MonoBehaviour:
   m_ObjectHideFlags: 0

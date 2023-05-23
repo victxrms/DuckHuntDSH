@@ -12,6 +12,7 @@ TagManager:
   - Pato
   - Puntos_extra
   - Patos_lentos
+  - Spawner
   layers:
   - Default
   - TransparentFX

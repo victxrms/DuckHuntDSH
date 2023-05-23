@@ -5,11 +5,12 @@ using UnityEngine;
 public class bala : MonoBehaviour
 {
     public float life = 3;
-    GameObject Pato;
+    GameObject Pato, Diana, Spawner;
 
     void Start()
     {
         Pato = GameObject.FindWithTag("Pato");
+        Spawner = GameObject.FindWithTag("Spawner");
     }
 
     void Awake()
@@ -25,16 +26,14 @@ public class bala : MonoBehaviour
     
         if(other.CompareTag("Pato"))
         {
-            //Spawner.SendMessage("Patotocado");            
-            //Diana.SendMessage("Sumar_puntos");
-            
-
+            Spawner.SendMessage("Patotocado");            
+            Spawner.SendMessage("Sumar_puntos");
         }
 
         if(other.CompareTag("Puntos_extra"))
         {
             Destroy(other.gameObject);
-            other.SendMessage("Puntos_extra");
+            Spawner.SendMessage("Puntos_extra");
         }
 
         if(other.CompareTag("Patos_lentos"))

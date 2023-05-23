@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8423017340690997256, guid: 03bfdeb0af178bd4ea71eabc79243ce5, type: 3}
       propertyPath: m_Name
-      value: pollo Variant
+      value: Pollo
       objectReference: {fileID: 0}
     - target: {fileID: 8423017340690997256, guid: 03bfdeb0af178bd4ea71eabc79243ce5, type: 3}
       propertyPath: m_TagString
@@ -21,15 +21,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8426080329972573446, guid: 03bfdeb0af178bd4ea71eabc79243ce5, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8426080329972573446, guid: 03bfdeb0af178bd4ea71eabc79243ce5, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8426080329972573446, guid: 03bfdeb0af178bd4ea71eabc79243ce5, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8426080329972573446, guid: 03bfdeb0af178bd4ea71eabc79243ce5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -77,6 +77,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -6866194310621115088, guid: 03bfdeb0af178bd4ea71eabc79243ce5, type: 3}
+    - {fileID: -761622068725300153, guid: 03bfdeb0af178bd4ea71eabc79243ce5, type: 3}
+    - {fileID: 8481653382953884468, guid: 03bfdeb0af178bd4ea71eabc79243ce5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 03bfdeb0af178bd4ea71eabc79243ce5, type: 3}
 --- !u!1 &732455150158985726 stripped
 GameObject:
@@ -96,3 +98,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.31498212, y: 0.44219893, z: 0.39538622}
   m_Center: {x: -0.0034434001, y: 0.21626887, z: -0.0072389445}
+--- !u!114 &-7088875727816707073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732455150158985726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75d00c9391eb8b045aeaadb26104530a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

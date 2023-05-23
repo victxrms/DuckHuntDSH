@@ -19,8 +19,8 @@ public class arma : MonoBehaviour
     public Sprite balaT;
     public Sprite NobalaT;
 
-    public List<UnityEngine.UI.Image> balasCargador; // Lista para las imágenes de las balas del cargador
-    private int indiceBalaCargadorActual = 0; // Índice de la bala actual en el cargador
+    public List<UnityEngine.UI.Image> balasCargador; // Lista para las imï¿½genes de las balas del cargador
+    private int indiceBalaCargadorActual = 0; // ï¿½ndice de la bala actual en el cargador
 
     public List<UnityEngine.UI.Image> balasTotales;
     private int indiceBalaTotalActual = 0;
@@ -39,6 +39,8 @@ public class arma : MonoBehaviour
     public GameObject over;
 
     public GameObject clear;
+
+    GameObject Spawner;
 
     void recargaEscopeta()
     {
@@ -59,17 +61,7 @@ public class arma : MonoBehaviour
         hudJuegoCanvas.SetActive(true);
         hudFinalCanvas.SetActive(false);
         perroMalo.SetActive(false);
-        
-
-    }
-
-    IEnumerator finaliza()
-    {
-        clear.SetActive(false);
-        over.SetActive(true);
-        perroMalo.SetActive(true);
-        yield return new WaitForSeconds(5);
-        SceneManager.LoadScene("Main menu");
+        Spawner = GameObject.FindWithTag("Spawner");
     }
 
     void Update()
@@ -111,23 +103,7 @@ public class arma : MonoBehaviour
 
             else
             {
-                 
-                clear.SetActive(true);
-                maintheme.SetActive(false);
-                hudJuegoCanvas.SetActive(false);
-                hudFinalCanvas.SetActive(true);
-                Cursor.lockState = CursorLockMode.None;
-
-                script = personaje.GetComponent<cameraMovement>();
-                script.para();
-
-                if (Input.GetMouseButtonDown(0))
-                {
-                    Destroy(clear.GetComponent<AudioSource>());
-                    clear.SetActive(false);
-                    StartCoroutine(finaliza());
-                }
-
+                Spawner.SendMessage("TerminarEjecuccion");
             }
     }
 }
