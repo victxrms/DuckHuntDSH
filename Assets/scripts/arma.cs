@@ -91,12 +91,7 @@ public class arma : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.R))
                 {
-                    for (int i = indiceBalaCargadorActual; i >= 1; i--)
-                    {
-                        balasCargador[i].sprite = balaC;
-                    }
-
-                    indiceBalaCargadorActual = 0;
+                recargaEscopeta();
                 }
 
             }
