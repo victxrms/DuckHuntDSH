@@ -15,7 +15,7 @@ public class Oleada : MonoBehaviour
     Vector3 posicionSpawnPato;
     private GameObject PatoInstancia;
     public ParticleSystem particulas;
-    public GameObject acierto, huida, clear, over, maintheme, perroMalo, hudJuegoCanvas, hudFinalCanvas, personaje, pistola, mira;
+    public GameObject acierto, huida, clear, over, maintheme, perroMalo, hudJuegoCanvas, hudFinalCanvas, personaje, pistola;
     public Text TextoHuida, TextoOleada;
     bool tocado, terminado = false;
     private cameraMovement script;
@@ -127,7 +127,7 @@ public class Oleada : MonoBehaviour
         {
             Destroy(PatoInstancia);
         }
-        mira.SetActive(false);
+        
         terminado = true;
         pistola.SetActive(false);
         clear.SetActive(true);
