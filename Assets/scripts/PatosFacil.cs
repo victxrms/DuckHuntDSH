@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class Patos : MonoBehaviour
+public class PatosFacil : MonoBehaviour
 {
     //Abajo izquierda-> (12,7,15)
     //Abajo derecha-> (12, 7, -45)
@@ -26,8 +26,8 @@ public class Patos : MonoBehaviour
         y = transform.position.y;
         z = transform.position.z;
         System.Random random = new System.Random();
-        velocidad_y = (float)random.Next(1, 7)/30;
-        velocidad_z  = (float)random.Next(1, 7)/30;
+        velocidad_y = (float)random.Next(1, 7)/60;
+        velocidad_z  = (float)random.Next(1, 7)/60;
         mov_vert = random.Next(1, 3);
         mov_hor = random.Next(1, 3);
     }
