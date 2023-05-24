@@ -4,47 +4,46 @@ using UnityEngine;
 
 public class cameraMovement : MonoBehaviour
 {
-    public Camera fpsCamera;
+    public Camera fpsCamera; // Referencia a la c谩mara en primera persona
 
-    public float horizontalSpeed;
-    public float verticalSpeed;
+    public float horizontalSpeed; // Velocidad de rotaci贸n horizontal
+    public float verticalSpeed; // Velocidad de rotaci贸n vertical
 
-    private float h;
-    private float v;
-
+    private float h; // Movimiento horizontal del mouse
+    private float v; // Movimiento vertical del mouse
 
     // Start is called before the first frame update
     void Start()
     {
-
+        // No se realiza ninguna acci贸n al inicio
     }
 
     public void para()
     {
-        horizontalSpeed = 0.0f;
-        verticalSpeed = 0.0f;
+        horizontalSpeed = 0.0f; // Establece la velocidad horizontal a cero
+        verticalSpeed = 0.0f; // Establece la velocidad vertical a cero
     }
 
     // Update is called once per frame
     void Update()
     {
-        h = horizontalSpeed * Input.GetAxis("Mouse X");
-        v = verticalSpeed * Input.GetAxis("Mouse Y");
+        h = horizontalSpeed * Input.GetAxis("Mouse X"); // Obtiene el movimiento horizontal del mouse multiplicado por la velocidad horizontal
+        v = verticalSpeed * Input.GetAxis("Mouse Y"); // Obtiene el movimiento vertical del mouse multiplicado por la velocidad vertical
 
-        // Limitar la rotaci髇 vertical para evitar mirar hacia atr醩
-        float currentRotationX = fpsCamera.transform.eulerAngles.x;
-        float newRotationX = currentRotationX - v;
+        // Limitar la rotaci贸n vertical para evitar mirar hacia atr谩s
+        float currentRotationX = fpsCamera.transform.eulerAngles.x; // Obtiene la rotaci贸n actual en el eje X de la c谩mara en primera persona
+        float newRotationX = currentRotationX - v; // Calcula la nueva rotaci贸n en el eje X restando el movimiento vertical
         if (newRotationX > 180f)
         {
-            newRotationX -= 360f;
+            newRotationX -= 360f; // Si la nueva rotaci贸n es mayor a 180 grados, se le resta 360 grados para mantenerla dentro del rango [-180, 180]
         }
-        newRotationX = Mathf.Clamp(newRotationX, -80f, 80f);
+        newRotationX = Mathf.Clamp(newRotationX, -80f, 80f); // Limita la rotaci贸n en el eje X para evitar mirar demasiado hacia arriba o hacia abajo
 
-        // Limitar la rotaci髇 horizontal
-        float currentRotationY = transform.eulerAngles.y;
-        float newRotationY = currentRotationY + h;
+        // Limitar la rotaci贸n horizontal
+        float currentRotationY = transform.eulerAngles.y; // Obtiene la rotaci贸n actual en el eje Y del objeto
+        float newRotationY = currentRotationY + h; // Calcula la nueva rotaci贸n en el eje Y sumando el movimiento horizontal
 
-        transform.rotation = Quaternion.Euler(0, newRotationY, 0);
-        fpsCamera.transform.localRotation = Quaternion.Euler(newRotationX, 0, 0);
+        transform.rotation = Quaternion.Euler(0, newRotationY, 0); // Actualiza la rotaci贸n del objeto en base a la nueva rotaci贸n en el eje Y
+        fpsCamera.transform.localRotation = Quaternion.Euler(newRotationX, 0, 0); // Actualiza la rotaci贸n local de la c谩mara en primera persona en base a la nueva rotaci贸n en el eje X
     }
 }
