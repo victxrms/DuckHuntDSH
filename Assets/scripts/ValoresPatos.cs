@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class ValoresPatos
 {
-    public GameObject Pato; //Prefab del enemigo que creamos
-    public int NumPatos; // números de enemigos que deben salir en cada orda
-    public float TiempoSpawn; //tiempo entre la creación de enemigos
+    public GameObject Pato; //Prefab de los patos que se necesitan spawnear
+    public int NumPatos; // números de patos que salen cada oleada
+    public float TiempoSpawn; //tiempo de vida para el pato
 }
