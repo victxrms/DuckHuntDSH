@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 531431785023317998}
   m_LocalRotation: {x: -0.15380354, y: -0.66021603, z: -0.61827976, w: -0.39773044}
   m_LocalPosition: {x: -7.8780384, y: 6.3549256, z: -40.741684}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1572868497619368122}
   m_Father: {fileID: 0}
@@ -48,9 +48,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 3
-  Patillo: {fileID: 732455150158985726, guid: 4d12643e415a49a44b840757f6078336, type: 3}
-  Diana: {fileID: 4847888090771919772, guid: e07a3371c1c26144d9da97955f7c95fd, type: 3}
-  Spawner: {fileID: 748648200341563017, guid: 32560ece57958e34abd0ae1a99cc9fa2, type: 3}
 --- !u!54 &3899096786858205163
 Rigidbody:
   m_ObjectHideFlags: 0
